@@ -1,8 +1,55 @@
-.bottom-section {
+.flex-container {
   display: flex;
 }
 
-.bottom-section div {
+.flex-container div {
   margin: 10px;
   padding: 20px;
+}
+
+.category img {
+  width: 200px;
+  height: 200px;
+}
+
+.category-title {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.shop-btn {
+  background-color: #3268be;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  width: 96%;
+  padding: 12px;
+  margin-top: 11px;
+}
+
+.item1 {
+  grid-area: Grid1;
+}
+.item2 {
+  grid-area: Grid2;
+}
+.item3 {
+  grid-area: Grid3;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "Grid1 Grid1 Grid1 Grid2"
+    "Grid1 Grid1 Grid1 Grid3";
+  gap: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
 }
