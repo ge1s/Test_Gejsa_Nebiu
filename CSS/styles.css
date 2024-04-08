@@ -1,0 +1,8 @@
+.bottom-section {
+  display: flex;
+}
+
+.bottom-section div {
+  margin: 10px;
+  padding: 20px;
+}
