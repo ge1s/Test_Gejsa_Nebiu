@@ -1,5 +1,6 @@
 .flex-container {
   display: flex;
+  flex-direction: row;
 }
 
 .flex-container div {
@@ -33,23 +34,82 @@
   margin-top: 11px;
 }
 
-.item1 {
-  grid-area: Grid1;
-}
-.item2 {
-  grid-area: Grid2;
-}
-.item3 {
-  grid-area: Grid3;
-}
 .grid-container {
   display: grid;
-  grid-template-areas:
-    "Grid1 Grid1 Grid1 Grid2"
-    "Grid1 Grid1 Grid1 Grid3";
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: 70% 30%;
 }
 
-@media only screen and (max-width: 600px) {
+.grid2 img {
+  height: 200px;
+  width: 380px;
+}
+
+.grid1 img {
+  height: 405px;
+  width: 850px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.carousel {
+  width: 90vw;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.item {
+  flex-basis: 20%;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+.left,
+.right {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #3268be;
+  font-size: 5rem;
+  overflow: hidden;
+  z-index: 100;
+}
+img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category img {
+    width: 500px;
+    height: 400px;
+  }
+
+  .shop-btn {
+    width: 98%;
+  }
+  .grid-container {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid2 img {
+    height: 400px;
+    width: 600px;
+  }
+
+  .grid1 img {
+    height: 400px;
+    width: 600px;
+  }
 }
